@@ -25,6 +25,6 @@ public class Chance {
     }
 
     public Chance not() {
-        return new Chance(totalNumberOfOccurrences - occurrence, 4);
+        return new Chance(totalNumberOfOccurrences - occurrence, totalNumberOfOccurrences);
     }
 }
