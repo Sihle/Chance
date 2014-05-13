@@ -51,7 +51,7 @@ public class testChance {
 
     @Test
     public void testShouldKnowThatAChanceOfNotOccurringIsEqualToAChanceOfNotOccurring() throws Exception {
-        assertEquals(new Chance(1, 6).not(),new Chance(1, 6).not());
+        assertEquals(new Chance(2, 58).not(),new Chance(2, 58).not());
     }
 
     @Test
@@ -77,5 +77,14 @@ public class testChance {
     @Test
     public void testShouldKnowThatANotNotNotChanceIsNotEqualToAChance() throws Exception {
         assertNotEquals(new Chance(1, 4).not().not().not(), new Chance(1, 4));
+    }
+
+    @Test
+    public void testShouldKnowThatAChanceOrAChanceIsEqualToAChance() throws Exception {
+        assertEquals(new Chance(5, 6).or(new Chance(1, 6)), new Chance(1, 6));
+    }
+    @Test
+    public void testShouldKnowThatAChanceOrAChanceIsNotEqualToAChance() throws Exception {
+        assertNotEquals(new Chance(5, 6).or(new Chance(3, 6)), new Chance(1, 6));
     }
 }

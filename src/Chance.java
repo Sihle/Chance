@@ -27,4 +27,12 @@ public class Chance {
     public Chance not() {
         return new Chance(totalNumberOfOccurrences - occurrence, totalNumberOfOccurrences);
     }
+
+    public Chance or(Chance chance) {
+        if (occurrence == (totalNumberOfOccurrences - occurrence)) {
+            return new Chance(occurrence, totalNumberOfOccurrences);
+        }else {
+            return chance;
+        }
+    }
 }
