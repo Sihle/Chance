@@ -5,14 +5,9 @@ public class Chance {
         this.occurrence = occurrence;
         this.totalNumberOfOccurrences = totalNumberOfOccurrences;
     }
-//    public int percentage() {
+//    public int probability() {
 //        return occurrence/totalNumberOfOccurrences);
 //    }
-    @Override
-    public boolean equals(Object obj) {
-        Chance chanceObj = (Chance) obj;
-        return (double)chanceObj.occurrence / chanceObj.totalNumberOfOccurrences == (double)this.occurrence / this.totalNumberOfOccurrences;
-    }
 
     @Override
     public String toString() {
@@ -21,7 +16,7 @@ public class Chance {
     }
 
     public Chance and(Chance chance) {
-        return new Chance(occurrence * chance.occurrence, totalNumberOfOccurrences * chance.totalNumberOfOccurrences);
+        return new Chance(this.occurrence * chance.occurrence, this.totalNumberOfOccurrences * chance.totalNumberOfOccurrences);
     }
 
     public Chance not() {

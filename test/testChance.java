@@ -4,19 +4,10 @@ import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
 public class testChance {
-    @Test
-    public void testTheEqualityTwoChancesThatAreNotTheSame() throws Exception {
-        assertFalse(new Chance(25, 56).equals(new Chance(2, 10)));
-    }
 
     @Test
-    public void testTheEqualityTwoChancesThatAreTheSame() throws Exception {
+    public void testChanceObjectIsEqualToItsSelf() throws Exception {
         assertTrue(new Chance(1, 6).equals(new Chance(1, 6)));
-    }
-
-    @Test
-    public void testChanceEqualsAnotherChanceWhenParametersIsNotTheSame() throws Exception {
-        assertTrue(new Chance(4,7).equals(new Chance(8,14)));
     }
 
     @Test
